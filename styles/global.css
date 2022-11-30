@@ -1,0 +1,99 @@
+:root {
+    --nav-section-blur: 2px;
+    --nav-section-upperHeight: 10vh;
+    --nav-section-lowerHeight: 5vh;
+    --nav-section-upperBorder-margin: 5vmin;
+    --nav-section-upperButtons-margin: 2vmin;
+
+    --color-dark-gray: #353535;
+}
+
+* {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+nav * {
+    overflow: hidden;
+}
+
+nav>section#upperSection {
+    background-color: black;
+    width: 100vw;
+    height: var(--nav-section-upperHeight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a:has(span#logoTitle) {
+    text-decoration: none;
+    font-size: 4.5vmin;
+    font-family: 'Ink free';
+    font-weight: bolder;
+    color: white;
+    margin: 0 var(--nav-section-upperBorder-margin);
+}
+
+nav>section#upperSection>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 var(--nav-section-upperBorder-margin) 0 0;
+    display: flex;
+}
+
+nav>section#upperSection>ul>li {
+    margin-left: var(--nav-section-upperButtons-margin);
+    border-radius: 10px;
+    transition: background-color .2s ease-out;
+}
+
+nav>section#upperSection>ul>li:hover {
+    background-color: white;
+    transition: background-color .2s ease-in;
+}
+
+nav>section#upperSection>ul>li:hover path,
+nav>section#upperSection>ul>li:hover circle {
+    fill: black;
+    transition: fill .1s ease-in;
+}
+
+nav>section#upperSection>ul>li path,
+nav>section#upperSection>ul>li circle {
+    fill: white;
+    transition: fill .1s ease-out;
+}
+
+nav>section#lowerSection {
+    width: 100vw;
+    height: var(--nav-section-lowerHeight);
+    backdrop-filter: blur(var(--nav-section-blur));
+}
+
+main {
+    width: 100vw;
+    height: calc(100vh - var(--nav-section-upperHeight) - var(--nav-section-lowerHeight));
+    margin-top: var(--nav-section-upperHeight);
+    padding-top: var(--nav-section-lowerHeight);
+}
+
+/*
+@media (prefers-color-scheme: light) {
+    a#profileLink path {
+        fill: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    a#profileLink path {
+        fill: white;
+    }
+}
+*/

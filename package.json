@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "author": {
+    "name": "Ninel-Valentin Banica",
+    "email": "valentinbanica8@gmail.com",
+    "url": "https://ninel-valentin.github.io/portofolio/public/index"
+  },
+  "dependencies": {
+    "next": "^13.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  }
+}
