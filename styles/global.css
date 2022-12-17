@@ -6,11 +6,17 @@
     --nav-section-upperButtons-margin: 2vmin;
 
     --color-dark-gray: #353535;
+    --border-radius-small: 15px;
+    --border-radius-normal: 25px;
 }
 
 * {
     margin: 0;
     overflow-x: hidden;
+}
+
+* {
+    font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -35,10 +41,13 @@ nav>section#upperSection {
 a:has(span#logoTitle) {
     text-decoration: none;
     font-size: 4.5vmin;
-    font-family: 'Ink free';
     font-weight: bolder;
     color: white;
     margin: 0 var(--nav-section-upperBorder-margin);
+}
+
+span#logoTitle {
+    font-family: 'Ink free';
 }
 
 nav>section#upperSection>ul {
@@ -72,6 +81,7 @@ nav>section#upperSection>ul>li circle {
 }
 
 nav>section#lowerSection {
+    background-color: yellow;
     width: 100vw;
     height: var(--nav-section-lowerHeight);
     backdrop-filter: blur(var(--nav-section-blur));
@@ -97,3 +107,7 @@ main {
     }
 }
 */
+
+g:has(path.Layer[id*="B"]) {
+    visibility: hidden;
+}

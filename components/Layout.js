@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import styles from './layout.module.css';
 
+// export async function getServerSideProps() {
+//     const supabaseUrl = process.env.SUPABASE_URL;
+//     const supabaseKey = process.env.SUPABASE_KEY;
+//     const supabase = createClient(supabaseUrl, supabaseKey);
+
+//     let { data: product_category_primary, error } = await supabase
+//         .from('product_category_primary')
+//         .select();
+
+//     return { props: { categoryResponse: { product_category_primary, error } } };
+// }
+
 export default function Layout({ children }) {
     return (
         <>
@@ -29,7 +41,8 @@ export default function Layout({ children }) {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/my/profile">
+                            {/*change this to /my/profile later*/}
+                            <Link href="/account/login">
                                 <svg width="48" height="48" x="0" y="0" viewBox="0 0 512 512">
                                     <path d="M461.311,103.059c-2.506-3.359-7.261-4.051-10.621-1.544c-3.359,2.506-4.051,7.261-1.544,10.621c31.19,41.804,47.676,91.552,47.676,143.866c0,64.325-25.05,124.801-70.535,170.286C380.802,471.773,320.326,496.822,256,496.822c-64.325,0-124.801-25.05-170.286-70.535C40.229,380.802,15.178,320.325,15.178,256s25.05-124.801,70.535-170.286S191.674,15.178,256,15.178c63.065,0,122.688,24.209,167.888,68.169c3.004,2.922,7.809,2.856,10.731-0.149c2.922-3.004,2.855-7.809-0.149-10.731C386.421,25.736,323.04,0,256,0C187.62,0,123.333,26.629,74.981,74.981S0,187.62,0,256s26.629,132.667,74.981,181.019S187.62,512,256,512s132.667-26.629,181.019-74.981C485.371,388.667,512,324.38,512,256C512,200.391,494.472,147.504,461.311,103.059z"></path>
                                     <path d="M255.657,118.277c-36.03,0-65.342,29.312-65.342,65.342c0,36.03,29.312,65.342,65.342,65.342c36.03,0,65.342-29.312,65.342-65.342C320.999,147.589,291.687,118.277,255.657,118.277z M255.657,233.783c-27.661,0-50.164-22.503-50.164-50.164c0-27.661,22.503-50.164,50.164-50.164c27.66,0,50.164,22.503,50.164,50.164C305.821,211.28,283.318,233.783,255.657,233.783z"></path>
@@ -53,9 +66,7 @@ export default function Layout({ children }) {
                 </section>
             </nav>
             <main>
-                <div className={styles.container}>
-                    {children}
-                </div>
+                {children}
             </main >
         </>
     );

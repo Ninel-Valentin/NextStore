@@ -1,0 +1,102 @@
+.userForm {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.userForm>section {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 3/2;
+}
+
+#formSection {
+    width: 45%;
+    height: 60%;
+    position: absolute;
+    left: 27.5%;
+    top: 17.5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+#formSection>div {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#formSection input[type="submit"] {
+    width: 50%;
+    height: 35%;
+    font-size: larger;
+    border-radius: var(--border-radius-normal);
+    border: 2px solid var(--color-dark-gray);
+    transition:
+        font-size .5s,
+        color .5s,
+        background-color .5s;
+}
+
+#formSection input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--color-dark-gray);
+    font-size: x-large;
+    color: white;
+    transition:
+        font-size .5s,
+        color .5s,
+        background-color .5s;
+}
+
+#credentialsSection {
+    flex-grow: 1.5;
+}
+
+#credentialsSection>span {
+    overflow: hidden;
+}
+
+.userInput {
+    padding: 0 !important;
+    width: 50%;
+    height: fit-content;
+    font-size: larger;
+}
+
+.alternativesList {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height:50%;
+    width: 100%;
+}
+
+.alternativesList>li {
+    height: 90%;
+    aspect-ratio: 1;
+    border: solid black 2px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.alternativesList>li:hover {
+    cursor: pointer;
+}
+
+.alternativesList>li svg {
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+}
